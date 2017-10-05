@@ -1,4 +1,5 @@
 class Api::V1::PagesController < ActionController::Base
+  rescue_from Errno::ECONNREFUSED, with: :invalid_request
 
   def index
     @pages = Page.includes(:tags).all
@@ -13,6 +14,11 @@ class Api::V1::PagesController < ActionController::Base
   end
 
   private
+
+  def invalid_request
+    head 400
+  end
+
 
   def url_params
     params.require(:url)

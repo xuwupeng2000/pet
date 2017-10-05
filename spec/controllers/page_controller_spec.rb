@@ -5,7 +5,7 @@ RSpec.describe Api::V1::PagesController, type: :controller do
 
   describe "GET #index" do
     before :all do
-      3.times do 
+      3.times do
         page = create(:page, :with_tags)
       end
     end
@@ -47,9 +47,9 @@ RSpec.describe Api::V1::PagesController, type: :controller do
 
     context 'with invalid url' do
       it "should raise error"  do
-        expect{
-          post :create, params: {url: 'not-url'}
-        }.to raise_error(Errno::ECONNREFUSED)
+        post :create, params: {url: 'not-url'}
+        #(Errno::ECONNREFUSED) is handled by controller
+        expect(response.status).to eq 400
       end
     end
   end
