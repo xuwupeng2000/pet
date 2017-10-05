@@ -25,9 +25,6 @@ bundle exec rspec spec
 
 ### APIs
 ```
-
-# Get the full list of page with its tags
-GET  /api/v1/pages
-# Give a url and create a page object with its tags (h1 h2 h3 a)
-POST /api/v1/pages
+Run the server and visit the following url
+http://localhost:3000/doc
 ```
