@@ -12,17 +12,16 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.5'
+gem 'httparty'
 
 group :development, :test do
+  gem 'pry-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-end
-
-group :development do
+  gem 'factory_girl_rails'
+  gem 'faker'
   gem 'rubocop', require: false
-  gem 'byebug', platform: :mri
-  gem 'pry-rails'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rspec-rails'
