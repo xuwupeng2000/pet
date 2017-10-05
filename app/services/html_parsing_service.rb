@@ -7,6 +7,7 @@ class HtmlParsingService
 
     html = Nokogiri::HTML(resp.body)
 
+    # You can see this is extendable, but for a test I just leave it that way
     interested_tags = %w(h1 h2 h3 a)
 
     interested_tags.each do |target|
