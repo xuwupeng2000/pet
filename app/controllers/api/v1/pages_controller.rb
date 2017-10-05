@@ -1,13 +1,15 @@
 class Api::V1::PagesController < ActionController::Base
 
   def index
-    @pages = Page.include(:tags).all
+    @pages = Page.includes(:tags).all
   end
 
   def create
     url  = url_params
     resp = HttpRequestService.new.get(url)
-    tags = HtmlParsingService.new.parse(resp)
+    @page = HtmlParsingService.new.parse(resp, url)
+
+    render :show
   end
 
   private
