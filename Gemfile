@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'httparty'
 
 group :development, :test do
+  gem 'listen'
   gem 'pry-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
