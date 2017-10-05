@@ -13,6 +13,7 @@ Pass an valid url and it will looking for specific tags and save it conent in a 
 
 ### How to get it going
 ```
+bundle install
 rake db:create
 rake db:migrate
 bundle exec rails s
