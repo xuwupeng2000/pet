@@ -22,10 +22,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rubocop', require: false
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rspec-rails'
-  gem 'database_cleaner'
   gem 'shoulda-matchers'
 end
 
